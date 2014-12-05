@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require jquery.magnific-popup.min
+//= require open_resume
 //= require jquery_ujs
 //= require turbolinks
