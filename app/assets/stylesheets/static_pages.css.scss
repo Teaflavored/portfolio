@@ -68,6 +68,34 @@ div#links{
   right:40px;
 }
 
+div#links div.expand-sidebar{
+  display:inline;
+}
+
+div#links div.show-portfolio{
+  display:inline;
+}
+
+div#links div.show-portfolio a{
+  font-size:22px;
+  color:#ecf0f1;
+  margin-right:30px;
+}
+
+
+div#links div.show-portfolio a,
+div#links div.show-portfolio a:hover,
+div#links div.show-portfolio a:active,
+div#links div.show-portfolio a:focus,
+div#links div.show-portfolio a:visited
+{
+  text-decoration:none;
+}
+
+div#links div.show-portfolio a:hover{
+  background: rgba(29, 29, 29, 0.5)
+}
+
 div.expand-sidebar span{
   font-size: 20px;
   cursor: pointer;
