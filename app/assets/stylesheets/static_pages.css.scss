@@ -36,16 +36,22 @@ div#center-pane div.main-content h1{
 }
 
 div#center-pane button{
-  width:20%;
+  width:24%;
   background:rgba(29,29,29,0.6);
+  background:rgba(0, 0, 0, 0);
   border:1px solid #ecf0f1;
   border-radius:0;
   position:relative;
 }
 
 div#center-pane button:hover,
-div#center-pane button:active{
+div#center-pane button:active,
+div#center-pane button:focus{
   color: #ecf0f1;
+}
+
+div#center-pane button:focus{
+  outline:none;
 }
 
 div#center-pane button:nth-last-child(2){
@@ -54,4 +60,24 @@ div#center-pane button:nth-last-child(2){
 
 div#center-pane button:last-child{
   margin-left:10px;
+}
+
+div#links{
+  position:absolute;
+  top:30px;
+  right:40px;
+}
+
+div.expand-sidebar span{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+div#sidebar{
+  background:white;
+  position:absolute;
+  right:-300px;
+  width:300px;
+  top:0;
+  bottom:0;
 }
