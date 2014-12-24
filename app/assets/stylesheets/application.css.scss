@@ -13,7 +13,8 @@
  *= require bootstrap.min
  *= require magnific-popup
  *= require sidebar
- *= require_tree .
+ *= require static_pages
+ *= require portfolio_page
  *= require_self
  */
 
@@ -27,13 +28,22 @@ html{
 body{
   position:relative;
   width:100%;
-  background:#111118;
+  background-color:#111118;
   background: url("/assets/bg2.jpg");
   background-repeat:no-repeat;
   background-position: center 0px;
   background-size:cover;
-  min-height:100%;
+  height:100%;
   overflow:hidden;
   color: #fff;
   font-family: 'Raleway', sans-serif;
+}
+
+
+.blur{
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
 }
