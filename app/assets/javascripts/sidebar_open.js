@@ -1,8 +1,6 @@
 $(function(){
 
-
-
-  $("span.side-bar-open").on("click", function(){
+  var sidebarOpenFn = function(){
     var opened = $("#sidebar").hasClass("open")
 
     var open = function(){
@@ -32,5 +30,8 @@ $(function(){
     } else {
       open();
     }
-  })
+  }
+
+  $("span.side-bar-open").on("click", sidebarOpenFn);
+  $("button.about-me").on("click", sidebarOpenFn);
 })

@@ -13,12 +13,14 @@ div#logo{
 }
 
 div#center-pane{
-  left:27%;
-  position:absolute;
+  position:relative;
   overflow:hidden;
-  right:27%;
   height:150px;
   top:200px;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  width:500px;
+  margin:0 auto;
 }
 
 div#center-pane div.main-content{
@@ -29,6 +31,7 @@ div#center-pane div.main-content{
 }
 
 div#center-pane div.main-content h1{
+  display:inline-block;
   margin-top:0;
   letter-spacing:1px;
   font-size:65px;
