@@ -13,6 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery.magnific-popup.min
+//= require gridList
+//= require jquery.gridList
 //= require open_resume
 //= require jquery_ujs
 //= require turbolinks
