@@ -3,8 +3,10 @@ $(function(){
   $items.gridList({rows: 3});
   $items.gridList("resize", 3);
 
+  var firstChild = $items.find(".items:first-child");
+  $items.gridList("resizeItem", firstChild, 3, 3, "active");
+  
   $(window).resize(function(){
-
     $items.gridList("resize", 3);
   })
 
