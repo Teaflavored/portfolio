@@ -2,19 +2,19 @@ div#portfolio-content{
   background:linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.01));
   position:absolute;
   width:0;
-  height:auto;
   top:100px;
   transition:width 1s ease;
-  overflow-x:hidden;
-  overflow-y:scroll;
+  overflow:scroll;
+  bottom:50px;
 }
+
 ul.my-items{
-  height:400px;
-  float:left;
+  height:100%;
   box-sizing:border-box;
   overflow:auto;
   list-style:none;
   margin:0 auto;
+  padding:0;
   position:relative;
 }
 
