@@ -9,6 +9,11 @@ $(function(){
   };
 
   var openPortfolio = function(e){
+    if ($("#sidebar").hasClass("open")){
+      window.toggleSidebar();
+    }
+
+
     if (!$portfolioContent.hasClass("opened")){
       //expand portfolio area
       $portfolioContent.css("width", "100%");
@@ -46,6 +51,7 @@ $(function(){
     }
   }
 
+  window.togglePortfolio = openPortfolio;
 
 
   $portfolioLink.on("click", openPortfolio);

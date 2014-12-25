@@ -1,36 +1,41 @@
 $(function(){
 
   var sidebarOpenFn = function(){
-    var opened = $("#sidebar").hasClass("open")
+    if ($("div#portfolio-content").hasClass("opened")){
+      window.togglePortfolio();
+    }
+    var opened = $("#sidebar").hasClass("open");
 
     var open = function(){
-      $("#sidebar").addClass("open")
+      $("#sidebar").addClass("open");
 
-      var windowWidth = $(window).width()
-      var sidebarWidth = $("#sidebar").width()
-      var currentBodyWidth = $("body").width()
-      var newBodyPercent = (currentBodyWidth - sidebarWidth) / windowWidth * 100
+      var windowWidth = $(window).width();
+      var sidebarWidth = $("#sidebar").width();
+      var currentBodyWidth = $("body").width();
+      var newBodyPercent = (currentBodyWidth - sidebarWidth) / windowWidth * 100;
       //adjust width of body
       $("body").animate({
         width: newBodyPercent + "%"
-      }, 500)
+      }, 500);
 
 
     }
 
     var close = function(){
-      $("#sidebar").removeClass("open")
+      $("#sidebar").removeClass("open");
       $("body").animate({
         width: "100%"
-      }, 500)
+      }, 500);
     }
 
     if (opened) {
-      close()
+      close();
     } else {
       open();
     }
   }
+
+  window.toggleSidebar = sidebarOpenFn;
 
   $("span.side-bar-open").on("click", sidebarOpenFn);
   $("button.about-me").on("click", sidebarOpenFn);
