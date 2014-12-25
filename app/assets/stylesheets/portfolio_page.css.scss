@@ -23,4 +23,5 @@ li.items{
   position:absolute;
   z-index:1;
   background-color:#fff;
+  transition:width 0.5s, height 0.5s;
 }
