@@ -48,9 +48,14 @@
       this.reflow();
     },
 
-    resizeItem: function(element, size) {
+    resizeItem: function(element, size, height, selector) {
       this._createGridSnapshot();
-      this.gridList.resizeItem(this._getItemByElement(element), size);
+      if ($(element).hasClass(selector)){
+        this.gridList.resizeItem(this._getItemByElement(element), size, height);
+      } else {
+        this.gridList.resizeItem(this._getItemByElement(element), size);
+      }
+
       this._updateGridSnapshot();
 
       this.render();

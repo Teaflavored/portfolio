@@ -18,9 +18,9 @@ $(function(){
 
     $items.find(".items").each(function(listEl){
       if ($(this).hasClass("active")){
-        $items.gridList("resizeItem", $(this), 3, 4);
+        $items.gridList("resizeItem", $(this), 3, 3, "active");
       } else {
-        $items.gridList("resizeItem", $(this), 1);
+        $items.gridList("resizeItem", $(this), 1, 1);
       }
     })
 

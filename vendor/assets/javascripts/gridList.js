@@ -188,8 +188,13 @@ GridList.prototype = {
     this._resolveCollisions(item);
   },
 
-  resizeItem: function(item, width) {
-    this._updateItemSize(item, width);
+  resizeItem: function(item, width, height) {
+    if (height){
+      this._updateItemSize(item, width, height);
+    } else {
+      this._updateItemSize(item, width);
+    }
+
     this._resolveCollisions(item);
   },
 
@@ -297,16 +302,33 @@ GridList.prototype = {
     this._markItemPositionToGrid(item);
   },
 
-  _updateItemSize: function(item, width) {
+  _updateItemSize: function(item, width, height) {
     // TODO: Implement height change
     if (item.x !== null && item.y !== null) {
       this._deleteItemPositionFromGrid(item);
     }
     item.w = width;
-    this._markItemPositionToGrid(item);
+
+    if (!item.heightChanged){
+      item.oldY = item.y;
+    }
+
+    if (height){
+      item.h = height;
+      item.y = 0;
+      item.heightChanged = true;
+      this._markItemPositionToGrid(item, true);
+    } else {
+      item.h = 1;
+      if (item.oldY){
+        item.y = item.oldY;
+      }
+      this._markItemPositionToGrid(item);
+    }
+
   },
 
-  _markItemPositionToGrid: function(item) {
+  _markItemPositionToGrid: function(item, moveUp) {
     /**
      * Mark the grid cells that are occupied by an item. This prevents items
      * from overlapping in the grid
@@ -320,6 +342,8 @@ GridList.prototype = {
         this.grid[x][y] = item;
       }
     }
+
+
   },
 
   _deleteItemPositionFromGrid: function(item) {
