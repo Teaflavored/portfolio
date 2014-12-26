@@ -1,6 +1,6 @@
 div.sidebar-content{
   height:100%;
-  overflow:hidden;
+  overflow:scroll;
   color:#000;
   position:relative;
 }
@@ -37,11 +37,10 @@ p.sidebar-content{
   letter-spacing:0.2px;
   text-indent: 25px;
   padding: 0 20px;
-  height: 70%;
-  margin-bottom:30px;
+  height: 50%;
+  margin-bottom:0px;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
-  overflow:scroll;
   position:relative;
 }
 
@@ -50,4 +49,18 @@ p.sidebar-content span.sidebar-footer{
   margin-top:30px;
   text-indent:0px;
   bottom:3px;
+}
+
+div.mail{
+  padding:0 20px;
+  border-sizing:content-box;
+  width:100%;
+}
+
+div.mail input, div.mail textarea{
+  width:100%;
+}
+
+div.mail button.send-msg{
+  float:right;
 }
